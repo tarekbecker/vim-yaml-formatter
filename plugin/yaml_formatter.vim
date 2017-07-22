@@ -22,8 +22,9 @@ try:
     import vim
     import yaml
     from collections import OrderedDict
-except ImportError, e:
-    print('Please ensure that pyyaml is installed: pip install pyyaml')
+except ImportError:
+    print('Please ensure that pyyaml for your vim-python version is ' +\
+          'installed: pip install pyyaml or pip3 install pyyaml')
 else:
     # using ordered dict and pyyaml: https://stackoverflow.com/a/21912744
     def ordered_load(stream, Loader=yaml.Loader,
